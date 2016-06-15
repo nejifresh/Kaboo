@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+   android:background="@drawable/bg_image"
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+
+        android:layout_gravity="fill_horizontal"
+        android:id="@+id/imageLoad"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/taxi"
+        app:border_width="0dp"
+        app:border_color="#FF000000"/>
+    <TextView
+        android:id="@+id/txtDriverName"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="Driver Name Here"
+        android:textColor="@android:color/black"
+
+        android:paddingLeft="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:text="Vehicle Make and Type: "
+            android:textColor="@android:color/black"
+
+            android:id="@+id/tvCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+                android:text="Car Info here"
+            android:textColor="@android:color/black"
+            android:id="@+id/txtCarInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="Vehicle Registration No.: "
+            android:id="@+id/tvVehReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Registration No here"
+            android:id="@+id/txtVehReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:text="Air Conditioning: "
+            android:textColor="@android:color/black"
+
+            android:id="@+id/tvAC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="AC Info here"
+            android:textColor="@android:color/black"
+
+            android:id="@+id/txtACState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:text="Category: "
+            android:textColor="@android:color/black"
+
+            android:id="@+id/tvCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Category Info here"
+            android:id="@+id/txtCategory"
+            android:textColor="@android:color/black"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:text="Distance from me: "
+            android:textColor="@android:color/black"
+
+            android:id="@+id/tvDist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="Category Info here"
+            android:id="@+id/txtDist"
+            android:textColor="@android:color/black"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_twitter_followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        fancy:borderColor="#FFFFFF"
+        fancy:borderWidth="2dp"
+        fancy:defaultColor="#55acee"
+        fancy:focusColor="#8cc9f8"
+        fancy:fontIconResource="@string/icon_user"
+        fancy:fontIconSize="15dp"
+        fancy:iconPosition="left"
+        fancy:radius="40dp"
+        fancy:textSize = "10sp"
+        android:onClick="mapClick"
+        fancy:text="See  Location"
+        fancy:textColor="#FFFFFF"/>
+
+
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="20dp"
+        fancy:defaultColor="#7ed862"
+        fancy:focusColor="#2e5071"
+        fancy:fontIconResource="@string/icon_answer"
+        fancy:fontIconSize="15dp"
+        fancy:iconPosition="left"
+        fancy:radius="40dp"
+        fancy:textSize = "10sp"
+        android:onClick="phoneClick"
+        fancy:text="Call This Driver"
+        fancy:textColor="#ffffff" />
+
+
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        fancy:borderColor="#FFFFFF"
+        fancy:borderWidth="1dp"
+        fancy:defaultColor="#ff5f69"
+        fancy:focusColor="#ff838b"
+        fancy:fontIconResource="@string/icon_answer"
+        fancy:fontIconSize="15dp"
+        fancy:iconPosition="left"
+        fancy:radius="40dp"
+        fancy:textSize = "10sp"
+        android:onClick="freeClick"
+        fancy:text="Make Video Call"
+        fancy:textColor="#FFFFFF" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_facebook_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        fancy:borderColor="#FFFFFF"
+        fancy:borderWidth="1dp"
+        fancy:defaultColor="#ff9800"
+        fancy:focusColor="#5577bd"
+        android:onClick="addFavourites"
+        android:layout_marginTop="20dp"
+       fancy:textSize = "10sp"
+        fancy:fontIconResource="@string/icon_like"
+        fancy:fontIconSize="15sp"
+        fancy:iconPosition="right"
+        fancy:radius="40dp"
+        fancy:text="Add To My Favourites"
+        fancy:textColor="#FFFFFF"/>
+
+
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_facebook_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+android:onClick="rateDriver"
+        android:padding="20dp"
+        fancy:borderColor="#FFFFFF"
+        fancy:borderWidth="1dp"
+        fancy:defaultColor="#3b5998"
+        fancy:focusColor="#5577bd"
+        fancy:fontIconResource="@string/icon_follow"
+        fancy:fontIconSize="15sp"
+        fancy:iconPosition="left"
+        fancy:radius="40dp"
+
+        fancy:textSize = "10sp"
+        fancy:text="Rate this Driver"
+        fancy:textColor="#FFFFFF" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btnReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        fancy:borderColor="#FFFFFF"
+        fancy:borderWidth="1dp"
+        fancy:defaultColor="@android:color/holo_red_dark"
+        fancy:focusColor="#ff838b"
+         fancy:radius="40dp"
+        android:layout_marginBottom="50dp"
+        fancy:fontIconResource="@string/icon_send"
+        fancy:fontIconSize="15dp"
+        fancy:iconPosition="left"
+        fancy:textSize = "10sp"
+        android:onClick="reportClick"
+        fancy:text="Report this Driver"
+        fancy:textColor="#FFFFFF" />
+
+</LinearLayout>
+    </ScrollView>
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+</RelativeLayout>
+

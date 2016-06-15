@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+
+
+
+
+    defaultConfig {
+        applicationId "com.neji.kaboo"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 16
+        versionName "2.6"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    mavenLocal()
+
+    maven { url "http://cloudant.github.io/cloudant-sync-eap/repository" }
+
+    mavenCentral()
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.+'
+    compile 'com.cloudant:cloudant-sync-datastore-android:0.9.3'
+    compile 'com.cloudant:cloudant-sync-datastore-core:0.9.3'
+    compile 'com.android.support:support-v13:21.0.3'
+    compile 'com.google.code.findbugs:jsr305:3.0.0'
+    compile 'it.neokree:MaterialNavigationDrawer:1.1.9'
+    compile 'de.hdodenhof:circleimageview:1.2.1'
+    compile 'com.squareup.picasso:picasso:2.5.0'
+    compile 'com.google.android.gms:play-services-maps:6.5.87'
+    compile 'com.google.android.gms:play-services-location:6.5.87'
+    compile 'com.google.android.gms:play-services-ads:6.5.87'
+    compile 'com.github.medyo:fancybuttons:1.0@aar'
+    compile files('libs/Parse-1.8.2.jar')
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile files('libs/easyandroidanimationslibrary-v0.5.jar')
+
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/sinch-android-rtc-3.8.0-VIDEO-SNAPSHOT.jar')
+}

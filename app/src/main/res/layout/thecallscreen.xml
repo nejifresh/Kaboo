@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                android:background="#ffffffff">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+        android:layout_gravity="top"
+            android:background="#fffafafa"
+            >
+
+        <TextView
+                android:id="@+id/remoteUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:text=""
+            android:layout_marginBottom="10dp"
+                android:textSize="28sp"/>
+
+        <TextView
+                android:id="@+id/callState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Ringing"
+            android:textColor="@android:color/holo_orange_dark"
+
+                android:textSize="16sp"
+                android:textAllCaps="true"
+                />
+
+        <TextView
+                android:id="@+id/callDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="18dp"
+                android:layout_marginTop="4dp"
+                android:text="00:00"
+
+            android:textColor="@android:color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/kaboo"
+            android:padding="0dip"
+        android:id="@+id/calleeimage"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+            android:layout_weight="3"
+            android:contentDescription="Call background">
+
+
+    </ImageView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="0dip"
+        android:layout_weight="3"
+        android:background="@drawable/callbg" android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/remoteVideo" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" android:orientation="horizontal"/>
+
+        <RelativeLayout android:id="@+id/localVideo" android:layout_width="150dp"
+            android:layout_alignParentRight="true" android:layout_height="200dp"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+android:visibility="gone"
+        android:background="@color/greyish"
+        android:layout_weight="1">
+    <Button
+        android:id="@+id/hangupButton"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_end"/>
+    </RelativeLayout>
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btnHangUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        fancy:borderColor="#FFFFFF"
+        fancy:borderWidth="1dp"
+        fancy:defaultColor="@android:color/holo_red_dark"
+        fancy:focusColor="#ff838b"
+        fancy:radius="40dp"
+        android:onClick="endaCall"
+        android:layout_marginBottom="10dp"
+        fancy:fontIconResource="@string/icon_answer"
+        fancy:fontIconSize="15dp"
+        fancy:iconPosition="left"
+        fancy:textSize = "10sp"
+        fancy:text="End this Call"
+        fancy:textColor="#FFFFFF" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_facebook_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        fancy:borderColor="#FFFFFF"
+        fancy:borderWidth="1dp"
+        fancy:defaultColor="#ff9800"
+        fancy:focusColor="#5577bd"
+        android:onClick="turnSpeaker"
+        android:layout_marginTop="10dp"
+        fancy:textSize = "10sp"
+        android:layout_marginBottom="20dp"
+        fancy:iconPosition="right"
+        fancy:radius="40dp"
+        fancy:text="Turn Speaker On/Off"
+        fancy:textColor="#FFFFFF"/>
+</LinearLayout></ScrollView>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.Holo"
+   >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <!--  ListRow Left sied Thumbnail image -->
+        <LinearLayout android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dip">
+            <ImageView
+                android:id="@+id/dotonline"
+                android:src="@drawable/dotonline"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:src="@drawable/taxi"
+                app:border_width="0dp"
+                app:border_color="#FF000000"/>
+
+        </LinearLayout>
+
+        <!-- Title Of Song-->
+        <TextView
+            android:id="@+id/bizname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Rihanna Love the way lie"
+            android:textColor="#040404"
+            android:typeface="sans"
+            android:layout_marginTop="5dip"
+            android:textSize="15dip"
+            android:textStyle="bold"/>
+
+        <!-- Artist Name -->
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bizname"
+            android:textColor="#343434"
+            android:textSize="13dip"
+            android:maxLines="3"
+            android:layout_marginTop="1dip"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Just gona stand there and ..." />
+
+        <!-- Rightend Duration -->
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:text="5:45"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/address"
+            android:textSize="12sp"
+            android:textColor="#10bcc9"
+            android:textStyle="bold"/>
+        <RatingBar
+            android:id="@+id/ratebar"
+            android:layout_below="@id/address"
+            android:rating="2"
+            android:layout_marginTop="15dip"
+            style = "?android:attr/ratingBarStyleSmall"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Rightend Arrow -->
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+
+            android:layout_marginTop="10dp"
+android:src="@drawable/arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="false"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
